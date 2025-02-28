@@ -7,9 +7,6 @@ Page({
     countdownText: '',
     countdownInterval: null,
   },
-  onLoad(){
-
-  },
 
   // 监听倒计时标题输入变化
   onTitleChange(e) {
