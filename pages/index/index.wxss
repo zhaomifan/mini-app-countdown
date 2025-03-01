@@ -14,57 +14,67 @@
   }
 }
 
+/* 通用样式 */
 .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-
-
-.input {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.picker-view {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.countdown-wrapper {
-  /* flex: 1;
+/* 顶部导航栏 */
+.navbar {
   display: flex;
-  justify-content: center;
-  align-items: center; */
-
-
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+  /* background-color: #fff; */
+  border-bottom: 1px solid #eee;
 }
 
-/* 倒计时字体使用中国红 */
-.countdown {
-  font-size: 24px;
-  color: #ff0000; /* 中国红 */
-  font-weight: bold;
-  /* margin-bottom: 20px; */
-  text-align: center;
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
-/* 欢迎语使用中国传统黄色 */
-.countdown-title {
-  font-size: 18px;
-  color: #ffd700; /* 中国传统黄色 */
-  font-weight: bold;
+.title {
+  flex: 1;
+  padding: 5px;
+  /* border: 1px solid #ccc; */
+  align-content: center;
+  border-radius: 10px;
+}
+
+/* 功能分类 */
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tool-item {
+  /* 首先声明为弹性容器 */
+  display: flex;
+  /* 设置主轴方向为水平 */
+  flex-direction: row;
+  /* 子元素按比例分配剩余空间 */
+  flex: 1;
+  /* 最小宽度设置，可根据需要调整 */
+  min-width: 200px;
+  /* 外边距 */
+  margin: 10px;
+  /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 内边距 */
+  padding: 20px;
+  /* 盒子阴影 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* 背景色，可根据对比度需求调整 */
+  background-color: rgba(173, 216, 230, 0.795);
+  /* 子元素之间的间距 */
+  gap: 5px;
+}
+
+.tool-icon {
+  width: 50px;
+  height: 50px;
 }

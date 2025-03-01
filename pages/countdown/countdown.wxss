@@ -1,0 +1,70 @@
+
+/* 全局样式，背景跟随系统主题 */
+@media (prefers-color-scheme: light) {
+  page {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  page {
+    background-color: #121212;
+    color: #fff;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+.input {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.picker-view {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.countdown-wrapper {
+  /* flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 倒计时字体使用中国红 */
+.countdown {
+  font-size: 24px;
+  color: #ff0000; /* 中国红 */
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+/* 欢迎语使用中国传统黄色 */
+.countdown-title {
+  font-size: 18px;
+  color: #ffd700; /* 中国传统黄色 */
+  font-weight: bold;
+}

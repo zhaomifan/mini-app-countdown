@@ -1,26 +1,18 @@
 <view class="container">
-  
-  <!-- 倒计时显示区域 -->
-  
-  <view class="countdown-wrapper">
-    <view class="countdown-title">{{countdownTitle}}</view>
-    <view class="countdown">{{countdownText}}</view>
+  <!-- 顶部导航栏 -->
+  <view class="navbar">
+    <image class="logo" src="/images/logo.svg" mode="aspectFit"></image>
+    <text class="title">有用的工具</text>
   </view>
 
+  <!-- 功能列表 -->
+  <view class="tool-list">
+    <block wx:for="{{tools}}" wx:key="index">
+      <navigator url="{{item.url}}" class="tool-item">
+        <image src="/images/countdown.svg" class="tool-icon" />
+        <text>{{item.name}}</text>
+      </navigator>
+    </block>
+  </view>
 
-  <!-- 倒计时标题输入框 -->
-  <input class = "input" placeholder="请输入倒计时标题（如：距离元旦还有）" bindinput="onTitleChange" value="{{countdownTitle}}" />
-  <!-- 结束语输入框 -->
-  <input  class = "input" placeholder="请输入结束语（如：元旦快乐）" bindinput="onEndMessageChange" value="{{endMessage}}" />
-  <!-- 目标时间选择器 -->
-  <picker mode="date" value="{{targetDate}}" bindchange="onTargetDateChange">
-    <view class="picker-view">日期: {{targetDate}}</view>
-  </picker>
-  <picker mode="time" value="{{targetTime}}" bindchange="onTargetTimeChange">
-    <view class="picker-view">时间: {{targetTime}}</view>
-  </picker>
-  
-  
-  <!-- 确定按钮 -->
-  <button bindtap="startCountdown">确定</button>
 </view>
